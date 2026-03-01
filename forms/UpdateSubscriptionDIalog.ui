@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UpdateSubscriptionDialog</class>
+ <widget class="QDialog" name="UpdateSubscriptionDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Edit Member - Gym Management</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    background-color: #FFFFFF;
+    font-family: 'Segoe UI', Arial, sans-serif;
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <property name="leftMargin">
+    <number>12</number>
+   </property>
+   <property name="topMargin">
+    <number>12</number>
+   </property>
+   <property name="rightMargin">
+    <number>12</number>
+   </property>
+   <property name="bottomMargin">
+    <number>12</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="text">
+      <string>Edit Member Details</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+       font-size: 16pt;
+       font-weight: bold;
+       color: #1E3A8A;
+      </string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="detailsGroupBox">
+     <property name="title">
+      <string>Member Information</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+       QGroupBox {
+           background-color: #E3ECF9;
+           border: 1px solid #1E3A8A;
+           border-radius: 8px;
+           font-weight: bold;
+           color: #1E3A8A;
+           margin-top: 10px;
+       }
+       QGroupBox::title {
+           subcontrol-origin: margin;
+           left: 10px;
+           padding: 0 3px 0 3px;
+       }
+      </string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="labelAlignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="formAlignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="horizontalSpacing">
+       <number>10</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>10</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="nameLabel">
+        <property name="text">
+         <string>Name:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="nameEdit">
+        <property name="styleSheet">
+         <string notr="true">
+          padding: 4px;
+          border: 1px solid #D1D5DB;
+          border-radius: 4px;
+          background-color: #F9FAFB;
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="usernameLabel">
+        <property name="text">
+         <string>Username:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="usernameEdit">
+        <property name="styleSheet">
+         <string notr="true">
+          padding: 4px;
+          border: 1px solid #D1D5DB;
+          border-radius: 4px;
+          background-color: #F9FAFB;
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="phoneLabel">
+        <property name="text">
+         <string>Phone:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="phoneEdit">
+        <property name="styleSheet">
+         <string notr="true">
+          padding: 4px;
+          border: 1px solid #D1D5DB;
+          border-radius: 4px;
+          background-color: #F9FAFB;
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="passwordLabel">
+        <property name="text">
+         <string>Password:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="passwordEdit">
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+          padding: 4px;
+          border: 1px solid #D1D5DB;
+          border-radius: 4px;
+          background-color: #F9FAFB;
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="deadlineLabel">
+        <property name="text">
+         <string>Deadline:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QDateEdit" name="deadlineEdit">
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+          padding: 4px;
+          border: 1px solid #D1D5DB;
+          border-radius: 4px;
+          background-color: #F9FAFB;
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="amountLabel">
+        <property name="text">
+         <string>Amount:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="amountEdit">
+        <property name="styleSheet">
+         <string notr="true">
+          padding: 4px;
+          border: 1px solid #D1D5DB;
+          border-radius: 4px;
+          background-color: #F9FAFB;
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="scheduleLabel">
+        <property name="text">
+         <string>Schedule:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QComboBox" name="scheduleCombo">
+        <item>
+         <property name="text">
+          <string>MWF - 8AM to 10AM</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>TTS - 6PM to 8PM</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Daily - 7AM to 9AM</string>
+         </property>
+        </item>
+        <property name="styleSheet">
+         <string notr="true">
+          padding: 4px;
+          border: 1px solid #D1D5DB;
+          border-radius: 4px;
+          background-color: #F9FAFB;
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="paymentStatusLabel">
+        <property name="text">
+         <string>Payment Status:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QComboBox" name="paymentStatusCombo">
+        <item>
+         <property name="text">
+          <string>Paid</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Pending</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Overdue</string>
+         </property>
+        </item>
+        <property name="styleSheet">
+         <string notr="true">
+          padding: 4px;
+          border: 1px solid #D1D5DB;
+          border-radius: 4px;
+          background-color: #F9FAFB;
+         </string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="updateButton">
+       <property name="text">
+        <string>Update</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         QPushButton {
+             background-color: #1E3A8A;
+             color: white;
+             border-radius: 4px;
+             padding: 6px 12px;
+             font-weight: bold;
+         }
+         QPushButton:hover {
+             background-color: #3B82F6;
+         }
+        </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         QPushButton {
+             background-color: #EF4444;
+             color: white;
+             border-radius: 4px;
+             padding: 6px 12px;
+             font-weight: bold;
+         }
+         QPushButton:hover {
+             background-color: #DC2626;
+         }
+        </string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
