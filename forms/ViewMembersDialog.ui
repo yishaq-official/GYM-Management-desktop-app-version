@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ViewMembersDialog</class>
+ <widget class="QWidget" name="ViewMembersDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>View Members - Gym Management</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    background-color: #FFFFFF;
+    font-family: 'Segoe UI', Arial, sans-serif;
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <property name="leftMargin">
+    <number>12</number>
+   </property>
+   <property name="topMargin">
+    <number>12</number>
+   </property>
+   <property name="rightMargin">
+    <number>12</number>
+   </property>
+   <property name="bottomMargin">
+    <number>12</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="text">
+      <string>View and Manage Members</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+       font-size: 20pt;
+       font-weight: bold;
+       color: #1E3A8A;
+      </string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="searchLayout">
+     <item>
+      <widget class="QLineEdit" name="searchEdit">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>28</height>
+        </size>
+       </property>
+       <property name="placeholderText">
+        <string>Search by name...</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         padding: 4px;
+         border: 1px solid #D1D5DB;
+         border-radius: 4px;
+         background-color: #F9FAFB;
+        </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="refreshButton">
+       <property name="text">
+        <string>Refresh</string>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>28</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+         QPushButton {
+             background-color: #1E3A8A;
+             color: white;
+             border-radius: 4px;
+             padding: 6px 12px;
+             font-weight: bold;
+         }
+         QPushButton:hover {
+             background-color: #3B82F6;
+         }
+        </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="membersGroupBox">
+     <property name="title">
+      <string>Members List</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+       QGroupBox {
+           background-color: #E3ECF9;
+           border: 1px solid #1E3A8A;
+           border-radius: 8px;
+           font-weight: bold;
+           color: #1E3A8A;
+           margin-top: 10px;
+       }
+       QGroupBox::title {
+           subcontrol-origin: margin;
+           left: 10px;
+           padding: 0 3px 0 3px;
+       }
+      </string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QTableWidget" name="membersTable">
+        <property name="styleSheet">
+         <string notr="true">
+          QTableWidget {
+              background-color: #FFFFFF;
+              border: 1px solid #D1D5DB;
+              border-radius: 4px;
+          }
+          QTableWidget::item {
+              padding: 4px;
+          }
+          QHeaderView::section {
+              background-color: #1E3A8A;
+              color: white;
+              padding: 4px;
+              border: 1px solid #D1D5DB;
+          }
+         </string>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="showDropIndicator" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+
