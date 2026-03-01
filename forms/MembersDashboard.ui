@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MembersDashboard</class>
+ <widget class="QWidget" name="MembersDashboard">
+  <property name="windowTitle">
+   <string>Members Dashboard</string>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QWidget {
+        background-color: #FFFFFF;
+        font-family: Arial;
+        font-size: 11pt;
+    }
+    QLabel#headerLabel {
+        font-size: 24pt;
+        font-weight: bold;
+        background-color: #E6F0FA;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    QLabel#subscriptionLabel {
+        background-color: #F0F8FF;
+        border: 1px solid #AAB;
+        border-radius: 6px;
+        padding: 6px;
+    }
+    QLabel#paymentStatusLabel {
+        background-color: #F0F8FF;
+        border: 1px solid #AAB;
+        border-radius: 6px;
+        padding: 6px;
+    }
+    QPushButton#refreshPaymentButton {
+        background-color: #4CAF50;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 6px;
+    }
+    QPushButton#changePasswordButton {
+        background-color: #2196F3;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 6px;
+    }
+    QGroupBox#changePasswordGroup {
+        background-color: #F5F5F5;
+        border: 1px solid #CCC;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    QGroupBox::title {
+        subcontrol-origin: margin;
+        subcontrol-position: top center;
+        padding: 4px 16px;
+        font-weight: bold;
+    }
+    QTableWidget#scheduleTable {
+        border: 1px solid #BBB;
+        alternate-background-color: #F9F9F9;
+    }
+    QHeaderView::section {
+        background-color: #D3D3D3;
+        padding: 4px;
+        border: 1px solid #BBB;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <!-- Header -->
+   <item>
+    <widget class="QLabel" name="headerLabel">
+     <property name="text">
+      <string>Members Dashboard</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <!-- Subscription Deadline -->
+   <item>
+    <widget class="QLabel" name="subscriptionLabel">
+     <property name="text">
+      <string>Subscription Deadline: Loading...</string>
+     </property>
+    </widget>
+   </item>
+   <!-- Payment Status + Refresh Button -->
+   <item>
+    <layout class="QHBoxLayout" name="paymentLayout">
+     <item>
+      <widget class="QLabel" name="paymentStatusLabel">
+       <property name="text">
+        <string>Payment Status: Loading...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="refreshPaymentButton">
+       <property name="text">
+        <string>Refresh</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <!-- Weekly Schedule Table -->
+   <item>
+    <widget class="QTableWidget" name="scheduleTable">
+     <property name="rowCount">
+      <number>7</number>
+     </property>
+     <property name="columnCount">
+      <number>2</number>
+     </property>
+     <property name="horizontalHeaderLabels">
+      <stringlist>
+       <string>Day</string>
+       <string>Status</string>
+      </stringlist>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <!-- Change Password Group -->
+   <item>
+    <widget class="QGroupBox" name="changePasswordGroup">
+     <property name="title">
+      <string>Change Password</string>
+     </property>
+     <layout class="QFormLayout" name="changePasswordLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="currentPasswordLabel">
+        <property name="text">
+         <string>Current Password:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="currentPasswordEdit">
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="newPasswordLabel">
+        <property name="text">
+         <string>New Password:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="newPasswordEdit">
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="confirmPasswordLabel">
+        <property name="text">
+         <string>Confirm New Password:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="confirmPasswordEdit">
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="changePasswordButton">
+        <property name="text">
+         <string>Change Password</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
